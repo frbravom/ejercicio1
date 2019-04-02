@@ -28,9 +28,19 @@ and open the template in the editor.
         </div>
     </body>
     <script>
-        $("[id*=subsolicitud-ingvtas]").show();
-        $("#subsolicitud-ingvtas").addClass("active");
-        $("[id*=subsolicitud]").css("display", "block");
+        $("[id*=prisolicitud]").on("click", function (event) {
+            var idname = $(this).attr("id");
+            idname = idname.substring(13, 14);
+            //$("[id*=subsolicitud-"+idname+"]").css("display", "block");
+
+            if (($("[id*=subsolicitud-" + idname + "]").css("display") != "none")) {
+                $("[id*=subsolicitud-" + idname + "]").css("display", "none");
+            } else {
+                $("[id*=subsolicitud-" + idname + "]").css("display", "block");
+            }
+            
+        });
+        
         $('[data-toggle="tooltip"]').tooltip();
     </script>
 </html>

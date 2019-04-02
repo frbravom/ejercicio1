@@ -32,8 +32,24 @@ and open the template in the editor.
     </body>
 
     <script>
+        $("[id*=prisolicitud]").on("click", function (event) {
+                    var idname = $(this).attr("id");
+                    idname=idname.substring(13,14);
+                   //$("[id*=subsolicitud-"+idname+"]").css("display", "block");
+                   
+                   if (($("[id*=subsolicitud-"+idname+"]").css("display") != "none")) {
+                       $("[id*=subsolicitud-"+idname+"]").css("display", "none");
+                   }else{
+                       $("[id*=subsolicitud-"+idname+"]").css("display", "block");
+                   }
+                });
+                
+                
+        
+        
+        /*
         $("#prisolicitud-1").on("click", function (event) {
-            if (($("[id*=subsolicitud-ingprod]").css("display") != "none")) {
+            if (($("[id*=subsolicitud-1ingprod]").css("display") != "none")) {
                 $("[id*=subsolicitud-ingprod]").css("display", "none");
                 $("[id*=subsolicitud-ingvtas]").css("display", "none");
                 $("[id*=subsolicitud-ingbod]").css("display", "none");
@@ -66,7 +82,7 @@ and open the template in the editor.
         });
         
         
-        
+        */
         
         
         
