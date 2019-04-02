@@ -21,9 +21,9 @@ and open the template in the editor.
     <body>
 
         <div id="contenedor">
-            <div id="titulos">
-                <div id="titulositio"></div>
-                <div id="titulo"></div>
+            <div>
+                <div id="titulositio"><img src="jpg/logo.jpg"/>Ejercicio 01</div>
+                <div id="titulo">Index</div>
             </div>
             <div id="menu"><?php include('menu.php'); ?></div>
             <div id="contenido"></div>
@@ -32,16 +32,47 @@ and open the template in the editor.
     </body>
 
     <script>
-        $("#prisolicitud").on("click", function (event) {
-            if (($("[id*=subsolicitud]").css("display") != "none")) {
-                $("[id*=subsolicitud]").css("display", "none");
+        $("#prisolicitud-1").on("click", function (event) {
+            if (($("[id*=subsolicitud-ingprod]").css("display") != "none")) {
+                $("[id*=subsolicitud-ingprod]").css("display", "none");
+                $("[id*=subsolicitud-ingvtas]").css("display", "none");
+                $("[id*=subsolicitud-ingbod]").css("display", "none");
             } else {
-                $("[id*=subsolicitud]").show();
-                $("[id*=subsolicitud]").css("display", "block");
+                $("[id*=subsolicitud-ingprod]").show();
+                $("[id*=subsolicitud-ingprod]").css("display", "block");
+                $("[id*=subsolicitud-ingvtas]").show();
+                $("[id*=subsolicitud-ingvtas]").css("display", "block");
+                $("[id*=subsolicitud-ingbod]").show();
+                $("[id*=subsolicitud-ingbod]").css("display", "block");
             }
-
-
         });
+        
+        $("#prisolicitud-2").on("click", function (event) {
+            if (($("[id*=subsolicitud-infvtas]").css("display") != "none")) {
+                $("[id*=subsolicitud-infvtas]").css("display", "none");
+            } else {
+                $("[id*=subsolicitud-infvtas]").show();
+                $("[id*=subsolicitud-infvtas]").css("display", "block");
+            }
+        });
+        
+        $("#prisolicitud-3").on("click", function (event) {
+            if (($("[id*=subsolicitud-conprod]").css("display") != "none")) {
+                $("[id*=subsolicitud-conprod]").css("display", "none");
+            } else {
+                $("[id*=subsolicitud-conprod]").show();
+                $("[id*=subsolicitud-conprod]").css("display", "block");
+            }
+        });
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
         $('[data-toggle="tooltip"]').tooltip();
     </script>

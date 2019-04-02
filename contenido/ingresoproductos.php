@@ -19,8 +19,11 @@ and open the template in the editor.
     </head>
     <body>
         <div id="contenedor">
-            <div id="titulo"></div>
-            <div id="menu"><?php include('../menu.php');?></div>
+            <div>
+                <div id="titulositio"><img src="../jpg/logo.jpg"/>Ejercicio 01</div>
+                <div id="titulo">Ingreso de Productos</div>
+            </div>
+            <div id="menu"><?php include('../menu.php'); ?></div>
             <div id="contenido"></div>
         </div>
     </body>
